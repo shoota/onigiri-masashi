@@ -1,34 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Typography, Flex } from "antd"
+import onigiriLogo from "./assets/onigiri-log.svg"
+import onigiriIcon from "./assets/onigiri-icon.svg"
+import "./App.css"
+import { AppLayout } from "./ui/AppLayout"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <AppLayout>
+      <Flex align="middle" style={{ marginTop: "20%" }}>
+        <div style={{ width: "25vh" }}>
+          <img src={onigiriIcon} alt="logo" />
+        </div>
+        <div style={{ width: "70vh" }}>
+          <img src={onigiriLogo} alt="logo" />
+        </div>
+      </Flex>
+      <Flex
+        align="middle"
+        style={{ marginTop: "48px" }}
+        vertical
+        justify="center"
+      >
+        <div>
+          <Typography.Title>塩むすび単独に注力</Typography.Title>
+        </div>
+        <div>
+          <Typography.Title level={3}>
+            特にこだわっていないその辺の塩でおいしくつくる、まさしのこだわり
+          </Typography.Title>
+        </div>
+      </Flex>
+    </AppLayout>
   )
 }
 
