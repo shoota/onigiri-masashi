@@ -5,7 +5,7 @@ import fs from "fs"
 // https://vitejs.dev/config/
 
 const server =
-  process.env.DEPLOY_PLATFORM === "vite"
+  process.env.DEPLOY_PLATFORM === "vercel"
     ? undefined
     : {
         https: {
